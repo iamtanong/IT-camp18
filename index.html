@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduce myself</title>
+
+    <link rel="shortcut icon" href="/image/monitor.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- CSS Part -->
+    <style>
+        /* Font Family */
+        @import url('https://fonts.googleapis.com/css2?family=Prompt&family=Ubuntu&display=swap');
+
+        * {
+            font-family: 'Prompt', sans-serif;
+        }
+
+        /* Color Variables */
+        :root {
+            --text-color: #212529;
+            --bg-color: #E9E3E6;
+            --nav-color: #000;
+            --nav-bg-color1: rgba(255, 255, 255, 0.7);
+            --nav-bg-color2: rgba(255, 255, 255, 0);
+
+            --btn-color: #111111;
+            --btn-bg-color: #CCCCCC;
+
+            --line-color: #464646;
+            --btn-hover-color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Dark theme */
+        .dark {
+            --text-color: #E5E5E5;
+            --bg-color: #242424;
+            --nav-color: #fff;
+            --nav-bg-color1: rgba(0, 0, 0, 0.9);
+            --nav-bg-color2: rgba(0, 0, 0, 0);
+            --btn-color: #EBEBEB;
+            --btn-bg-color: #292929;
+            --line-color: #A3A3A3;
+            --btn-hover-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Body */
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            scroll-behavior: smooth;
+        }
+
+        /* Scroll Bar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #d0d0d0;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #495057;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #383e43;
+        }
+
+        /* NavBar */
+        nav {
+            position: fixed;
+            z-index: 999;
+            width: 100%;
+            list-style-type: none;
+            padding: 20px 0;
+            background: linear-gradient(var(--nav-bg-color1), var(--nav-bg-color2));
+        }
+
+        nav div {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav div li {
+            float: left;
+            margin: 0;
+            text-decoration: none;
+        }
+
+        nav div li a {
+            font-size: 20px;
+            text-decoration: none;
+            color: var(--nav-color);
+            padding: 20px 35px;
+            font-weight: 500;
+            border-radius: 10px;
+        }
+
+        nav div li a:hover {
+            background-color: var(--btn-hover-color);
+        }
+
+        nav button {
+            position: absolute;
+            top: 50%;
+            left: 99%;
+            transform: translate(-99%, -50%);
+            margin: 0;
+            padding: 10px;
+            border: none;
+            border-radius: 25%;
+            color: var(--btn-color);
+            background-color: var(--btn-bg-color);
+            cursor: pointer;
+        }
+
+        nav button:hover {
+            background-color: sandybrown;
+        }
+
+        .icon {
+            font-size: 24px;
+        }
+
+        /* Header */
+        header {
+            position: relative;
+            display: grid;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 50px 0;
+            margin: 0;
+
+            color: var(--text-color);
+        }
+
+        img {
+            margin: 5px 15%;
+            border: #fff 8px solid;
+            position: relative;
+            display: flex;
+            float: left;
+        }
+
+        section {
+            display: flexbox;
+            margin-left: 45%;
+            margin-top: 25px;
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+
+        h2 {
+            padding: 5px 0;
+            font-size: 32px;
+            margin: 0;
+        }
+
+        h5 {
+            padding: 15px 15%;
+            font-size: 20px;
+            margin: 0;
+        }
+
+        h5 a:hover {
+            color: red;
+        }
+
+        section a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Skill */
+        .ability {
+            position: relative;
+            display: grid;
+            padding: 30px 0;
+            color: var(--text-color);
+        }
+
+        main {
+            display: flex;
+            justify-content: space-around;
+            padding: 0 5px;
+        }
+
+        main img {
+            height: 100px;
+            padding: 0;
+            margin: 0;
+            border: none;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 28px;
+            padding: 15px 30px;
+        }
+
+        /* Contents */
+        .container {
+            padding: 15px 0;
+            position: relative;
+            color: var(--text-color);
+        }
+
+        ul {
+            padding: 0 15%;
+            margin: 0;
+            list-style-type: none;
+            position: relative;
+            display: grid;
+        }
+
+        ul li {
+            display: block;
+            padding: 20px 0;
+        }
+
+        .port {
+            padding: 0;
+            margin: 0 5%;
+            height: 200px;
+            width: auto;
+        }
+
+        h4 {
+            font-size: 18px;
+        }
+
+        p {
+            margin-left: 13px;
+        }
+
+        article {
+            margin-left: 50%;
+            color: var(--text-color);
+        }
+
+        /* Footer */
+        footer {
+            padding: 15px 0;
+            background-color: blueviolet;
+        }
+
+        h6 {
+            margin: 0;
+            font-size: 12px;
+        }
+
+        .content-divide {
+            content: "";
+            width: 40%;
+            height: 30px;
+            background-color: var(--line-color);
+        }
+
+        .content-divide::after {
+            content: '';
+            font-size: 0;
+            padding: 0;
+            width: 0;
+            height: 0;
+            border-top: 17px solid transparent;
+            border-bottom: 12px solid transparent;
+            border-left: 23px solid var(--line-color);
+
+            margin-left: 100%;
+        }
+        #pj {
+            padding: 0 5%;
+        }
+        #proj {
+            height: 450px;
+            margin-left: -35px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- * NavBar -->
+    <nav>
+        <div>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#skill">Abilities</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#pip">in Progress</a></li>
+            <li><a href="#footer">Footer</a></li>
+        </div>
+        <button id="mode-swift"><i class="fa-solid fa-moon icon"></i></button>
+    </nav>
+
+    <!-- * Header: Name and Pic -->
+    <header id="profile">
+        <h1>My Profile</h1>
+        <img src="/image/profile_port.png" alt="tanong-pic" class="pic" style="height: 250px; width: auto;">
+        <section>
+            <h2>Tanongsak Anurak</h2>
+            <h5>นายทนงศักดิ์ อนุรักษ์</h5>
+            <h5 style="font-size: 18px; padding: 5px 15%;">
+                อายุ 17 ปี<br>
+                โรงเรียนวิทยาศาสตร์จุฬาภรณราชวิทยาลัย นครศรีธรรมราช
+            </h5>
+            <h5 style="font-size: 18px; padding: 5px 15%;">
+                <a href="https://www.facebook.com/tanongsuk.anuruk/">Facebook : Tanongsak Anurak</a>
+                <a href="https://github.com/iamtanong">Github : iamtanong</a><br>
+                Email : tanongsak5913@gmail.com
+            </h5>
+        </section>
+    </header>
+
+    <div class="content-divide"></div>
+
+    <!-- * Contents: Skill -->
+    <div class="ability" id="skill">
+        <h1>My Abilities</h1>
+        <main>
+            <img src="/image/lang-logo/C.png" alt="C-language">
+            <img src="/image/lang-logo/CPP.png" alt="CPP-language">
+            <img src="/image/lang-logo/HTML5.png" alt="HTML5">
+            <img src="/image/lang-logo/CSS3.png" alt="CSS3">
+            <img src="/image/lang-logo/Javascript.png" alt="Javascript-language">
+            <img src="/image/lang-logo/React.png" alt="React-library">
+            <img src="/image/lang-logo/Dart.png" alt="Dart-language">
+            <img src="/image/lang-logo/Flutter.png" alt="Flutter-framework">
+            <img src="/image/lang-logo/Python.png" alt="Pyrhon-language">
+        </main>
+    </div>
+
+    <div class="content-divide"></div>
+
+    <!-- * Contents: Portfolio -->
+    <div class="container" id="portfolio">
+        <h1>My Portfolio</h1>
+        <ul>
+            <li>
+                <img src="/image/camp1.jpg" alt="port1" class="port pic">
+                <article>
+                    <h4>เข้าร่วมค่ายโอลิมปิกวิชาการคอมพิวเตอร์ ประจำปีการศึกษา 2565</h4>
+                    <p>เข้าร่วมสอวน.ค่าย 1 และ 2 สาขาคอมพิวเตอร์</p>
+                </article>
+            </li>
+            <li>
+                <img src="/image/camp1.jpg" alt="port2" class="port pic">
+                <article>
+                    <h4>การประกวดนวัตกรรมสร้างเสริมสุขภาพ Thai Health Innoaward 3</h4>
+                    <p>ได้ผ่านเข้ารอบ 20 ทีมสุดท้าย</p>
+                </article>
+            </li>
+            <li>
+                <img src="/image/camp1.jpg" alt="port3" class="port pic">
+                <article>
+                    <h4>เข้าร่วมการแข่งขัน World Robot Game 2019</h4>
+                    <p>เข้าร่วมการแข่งขัน World Robot Game 2019 ในเกม Fire fighter</p>
+                </article>
+            </li>
+            <li>
+                <img src="/image/camp1.jpg" alt="port4" class="port pic">
+                <article>
+                    <h4>รางวัลเหรียญทองแดง การแข่งขันหุ่นยนต์ IPST Microbox</h4>
+                    <p>ในงาน Thailand STEM Festival 2017 ภาคใต้ตอนบน</p>
+                </article>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content-divide"></div>
+
+    <!-- * Contents: Project in Progress -->
+    <div class="container" id="pip">
+        <h1>Project in Progress</h1>
+        <ul id="pj">
+            <li>
+                <img src="/image/web-pip.png" alt="web-pic" class="port pic" id="proj">
+                <article>
+                    <h4>ร่วมพัฒนาเว็ปไซต์สำหรับกิจกรรมรักการอ่าน</h4>
+                    <p>เว็ปไซต์สำหรับกิจกรรมรักการอ่านของนักเรียนโรงเรียนวิทยาศาสตร์จุฬาภรณราชวิทยาลัย นครศรีธรรมราช<br>
+                        ร่วมกันกับเพื่อนและคุณครูรวม 3 คน<br><strong>*อยู่ระหว่างการพัฒนา</strong><br>
+                        พัฒนาด้วย PHP Bootstrap5 MySQL
+                    </p>
+                </article>
+            </li>
+        </ul>
+    </div>
+
+    <!-- * Footer: Copyright -->
+    <footer id="footer">
+        <h6>
+            <center><i class="fa-solid fa-copyright"></i> Copyright Tanongsak Anurak</center>
+        </h6>
+    </footer>
+
+    <!-- !! Javascript -->
+    <script>
+        const h = document.querySelectorAll("h4");
+        for (let i = 0; i < h.length; i++) {
+            h[i].addEventListener("mouseover", function () {
+                h[i].style.color = "red";
+            })
+            h[i].addEventListener("mouseout", function () {
+                h[i].style.color = "inherit";
+            })
+        }
+
+        const button = document.getElementById("mode-swift");
+        const ic = document.querySelector(".icon");
+        const body = document.querySelector("body");
+
+        button.onclick = function () {
+            ic.classList.toggle('fa-sun');
+            body.classList.toggle('dark');
+        }
+    </script>
+</body>
+
+</html>
